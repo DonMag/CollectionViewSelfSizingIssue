@@ -10,6 +10,8 @@
 		FC8018562913E86600A74CC7 /* DonMagSampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8018552913E86600A74CC7 /* DonMagSampleCollectionViewCell.swift */; };
 		FC8018582913E87F00A74CC7 /* DonMagSampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8018572913E87F00A74CC7 /* DonMagSampleCollectionViewCell.xib */; };
 		FC80185A2913E8AD00A74CC7 /* DonMagTitleCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8018592913E8AD00A74CC7 /* DonMagTitleCollectionView.swift */; };
+		FC80185C29141DC800A74CC7 /* CodeSampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80185B29141DC800A74CC7 /* CodeSampleCollectionViewCell.swift */; };
+		FC80185E29141EA800A74CC7 /* CodeCellTitleCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80185D29141EA800A74CC7 /* CodeCellTitleCollectionView.swift */; };
 		FCF95558291320DD00B20B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF95557291320DD00B20B12 /* AppDelegate.swift */; };
 		FCF9555A291320DD00B20B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF95559291320DD00B20B12 /* SceneDelegate.swift */; };
 		FCF95561291320DE00B20B12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF95560291320DE00B20B12 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		FC8018552913E86600A74CC7 /* DonMagSampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonMagSampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC8018572913E87F00A74CC7 /* DonMagSampleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonMagSampleCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC8018592913E8AD00A74CC7 /* DonMagTitleCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonMagTitleCollectionView.swift; sourceTree = "<group>"; };
+		FC80185B29141DC800A74CC7 /* CodeSampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC80185D29141EA800A74CC7 /* CodeCellTitleCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCellTitleCollectionView.swift; sourceTree = "<group>"; };
 		FCF95554291320DD00B20B12 /* SelfSizingIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfSizingIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF95557291320DD00B20B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCF95559291320DD00B20B12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				FC8018592913E8AD00A74CC7 /* DonMagTitleCollectionView.swift */,
 				FC8018552913E86600A74CC7 /* DonMagSampleCollectionViewCell.swift */,
 				FC8018572913E87F00A74CC7 /* DonMagSampleCollectionViewCell.xib */,
+				FC80185B29141DC800A74CC7 /* CodeSampleCollectionViewCell.swift */,
+				FC80185D29141EA800A74CC7 /* CodeCellTitleCollectionView.swift */,
 				FCF95560291320DE00B20B12 /* Assets.xcassets */,
 				FCF95562291320DE00B20B12 /* LaunchScreen.storyboard */,
 				FCF95565291320DE00B20B12 /* Info.plist */,
@@ -162,7 +168,9 @@
 				FCF9556F2913211A00B20B12 /* ViewController.swift in Sources */,
 				FCF95558291320DD00B20B12 /* AppDelegate.swift in Sources */,
 				FCF955702913211A00B20B12 /* SampleCollectionViewCell.swift in Sources */,
+				FC80185E29141EA800A74CC7 /* CodeCellTitleCollectionView.swift in Sources */,
 				FC8018562913E86600A74CC7 /* DonMagSampleCollectionViewCell.swift in Sources */,
+				FC80185C29141DC800A74CC7 /* CodeSampleCollectionViewCell.swift in Sources */,
 				FC80185A2913E8AD00A74CC7 /* DonMagTitleCollectionView.swift in Sources */,
 				FCF9555A291320DD00B20B12 /* SceneDelegate.swift in Sources */,
 			);

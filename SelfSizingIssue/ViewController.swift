@@ -10,13 +10,15 @@ import UIKit
 class ViewController: UIViewController {
 
 	@IBOutlet var containerView: UIView!
-	@IBOutlet var myContainerView: UIView!
+	@IBOutlet var modContainerView: UIView!
+	@IBOutlet var dmContainerView: UIView!
 
 	@IBOutlet var infoLabel: UILabel!
 	
 	let collectionView = AdaptiveTitleCollectionView()
+	let modCollectionView = CodeCellTitleCollectionView()
 	let dmCollectionView = DonMagTitleCollectionView()
-	
+
 	override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,19 +28,23 @@ class ViewController: UIViewController {
 			// for "narrow / centering" testing
 			"this", "Sunday", "is",
 			// un-comment next line for "wide / no-jumping-back" testing
-			//"Monday", "example", "Tuesday", "for", "Wednesday", "some", "Thursday", "data", "Friday", "in", "Saturday"
+			"Monday", "example", "Tuesday", "for", "Wednesday", "some", "Thursday", "data", "Friday", "in", "Saturday"
 		]
 		
 		collectionView.items = items
+		modCollectionView.items = items
 		dmCollectionView.items = items
-
-        containerView.addSubview(collectionView)
-        collectionView.bindMarginsToSuperview()
 		
-		myContainerView.addSubview(dmCollectionView)
+		containerView.addSubview(collectionView)
+		collectionView.bindMarginsToSuperview()
+		
+		modContainerView.addSubview(modCollectionView)
+		modCollectionView.bindMarginsToSuperview()
+		
+		dmContainerView.addSubview(dmCollectionView)
 		dmCollectionView.bindMarginsToSuperview()
-        
-        // Do any additional setup after loading the view.
+		
+		// Do any additional setup after loading the view.
     }
 
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -52,7 +58,21 @@ class ViewController: UIViewController {
 				s += "collectionView selected items: \(selPath)"
 			}
 		}
+
 		s += "\n\n"
+
+		if let selPath = modCollectionView.indexPathsForSelectedItems {
+			if selPath.isEmpty {
+				s += "modCollectionView has NO selected item(s)!"
+				s += "\n"
+				s += "selectedIndexPath property: \(modCollectionView.selectedIndexPath)"
+			} else {
+				s += "modCollectionView selected items: \(selPath)"
+			}
+		}
+
+		s += "\n\n"
+
 		if let selPath = dmCollectionView.indexPathsForSelectedItems {
 			if selPath.isEmpty {
 				s += "dmCollectionView has NO selected item(s)!"
