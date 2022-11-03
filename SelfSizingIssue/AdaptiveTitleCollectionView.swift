@@ -61,7 +61,7 @@ class AdaptiveTitleCollectionView: UICollectionView, UICollectionViewDelegate, U
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SampleCollectionViewCell", for: indexPath) as! SampleCollectionViewCell
-		
+
 		let item = items[indexPath.item]
 		cell.setNeedsLayout()
 		cell.layoutIfNeeded()

@@ -25,10 +25,10 @@ class ViewController: UIViewController {
 		let items: [String] = [
 			// for "narrow / centering" testing
 			"this", "Sunday", "is",
-			// for "wide / no-jumping-back" testing
-			//"this", "Sunday", "is", "Monday", "example", "Tuesday", "for", "Wednesday", "some", "Thursday", "data", "Friday", "in", "Saturday"
+			// un-comment next line for "wide / no-jumping-back" testing
+			//"Monday", "example", "Tuesday", "for", "Wednesday", "some", "Thursday", "data", "Friday", "in", "Saturday"
 		]
-
+		
 		collectionView.items = items
 		dmCollectionView.items = items
 

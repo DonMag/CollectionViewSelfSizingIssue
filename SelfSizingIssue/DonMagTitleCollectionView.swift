@@ -35,8 +35,11 @@ class DonMagTitleCollectionView: UICollectionView, UICollectionViewDelegate, UIC
 		let flowLayout = UICollectionViewFlowLayout()
 		
 		// using a small width for estimated size
-		//	along with the contentSize / intrinsicContentSize code above
-		//	allows the collection view width to "shrink" when the cells' total width
+		//		- our cell has a label with 5-points Leading/Trailing
+		//		- if our cell's label is empty, the cell will be 10-points wide
+		//		- so we need at least that width to avoid auto-layout complaints
+		// along with the contentSize / intrinsicContentSize code above
+		//	this allows the collection view width to "shrink" when the cells' total width
 		//	is less than the allowed space
 		flowLayout.estimatedItemSize = CGSize(width: 10.0, height: 24.0)
 
