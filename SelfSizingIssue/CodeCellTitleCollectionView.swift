@@ -82,7 +82,11 @@ class CodeCellTitleCollectionView: UICollectionView, UICollectionViewDelegate, U
 		let c = CodeSampleCollectionViewCell()
 		c.myLabel.text = items[indexPath.item]
 		return c.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-		//return .init(width: 1, height: 1)
+
+//		var s = c.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+//		s.width += 20.0
+//		return .init(width: s.width + 20.0, height: s.height)
+		
 	}
 	
 }

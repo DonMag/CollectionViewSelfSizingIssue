@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 			// for "narrow / centering" testing
 			"this", "Sunday", "is",
 			// un-comment next line for "wide / no-jumping-back" testing
-			"Monday", "example", "Tuesday", "for", "Wednesday", "some", "Thursday", "data", "Friday", "in", "Saturday"
+			//"Monday", "example", "Tuesday", "for", "Wednesday", "some", "Thursday", "data", "Friday", "in", "Saturday"
 		]
 		
 		collectionView.items = items
