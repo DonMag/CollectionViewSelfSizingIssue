@@ -12,13 +12,34 @@ class DonMagTitleCollectionView: UICollectionView, UICollectionViewDelegate, UIC
 	// use var so we can set the data from the controller
 	var items: [String] = ["this", "is", "example", "for", "some", "data", "in", "array"]
 	
+	override var intrinsicContentSize: CGSize {
+		return contentSize
+	}
+	
+	override var contentSize: CGSize {
+		didSet {
+			guard contentSize.width > oldValue.width else {
+				return
+			}
+			print("dm old values \(oldValue). new value \(contentSize)")
+			DispatchQueue.main.async {
+				self.setNeedsLayout()
+				self.layoutIfNeeded()
+				self.invalidateIntrinsicContentSize()
+			}
+			
+		}
+	}
+	
 	init() {
 		let flowLayout = UICollectionViewFlowLayout()
 		
-		// use a reasonable estimated size
-		//flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-		flowLayout.estimatedItemSize = CGSize(width: 100.0, height: 24.0)
-		
+		// using a small width for estimated size
+		//	along with the contentSize / intrinsicContentSize code above
+		//	allows the collection view width to "shrink" when the cells' total width
+		//	is less than the allowed space
+		flowLayout.estimatedItemSize = CGSize(width: 10.0, height: 24.0)
+
 		flowLayout.scrollDirection = .horizontal
 		
 		flowLayout.sectionInset = .init(top: 16, left: 8, bottom: 16, right: 8)

@@ -23,7 +23,10 @@ class ViewController: UIViewController {
 		// let's use a longer array of items
 		//	so we have a better example of cell scrolling
 		let items: [String] = [
-			"this", "Sunday", "is", "Monday", "example", "Tuesday", "for", "Wednesday", "some", "Thursday", "data", "Friday", "in", "Saturday"
+			// for "narrow / centering" testing
+			"this", "Sunday", "is",
+			// for "wide / no-jumping-back" testing
+			//"this", "Sunday", "is", "Monday", "example", "Tuesday", "for", "Wednesday", "some", "Thursday", "data", "Friday", "in", "Saturday"
 		]
 
 		collectionView.items = items
